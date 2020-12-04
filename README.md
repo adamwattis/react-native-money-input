@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     }
 })
 ```
-Should render:
 ![Styled Money Input Gif](https://media.giphy.com/media/62U1Aa1h3qyo6dgoh6/giphy.gif)
 ## License
 Licensed under the MIT License
