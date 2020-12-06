@@ -9,7 +9,7 @@ const MoneyInput = ({value = '0.00', style, onChangeText}) => {
 
     const handleValueChange = (text) => {
         setNumValue(text)
-        if (onChangeText) return onChangeText(text)
+        if (onChangeText) return onChangeText(normalizer(text))
     }
     return (
         <>
