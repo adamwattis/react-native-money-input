@@ -3,8 +3,8 @@ import { TextInput, StyleSheet } from 'react-native'
 
 import normalizer from './utils/price-string-normalizer'
 
-const MoneyInput = ({value = '0.00', style, onChangeText}) => {
-
+const MoneyInput = props => {
+    const {value = '0.00', style, onChangeText} = props
     const [ numValue, setNumValue ] = useState(value)
 
     const handleValueChange = (text) => {
@@ -14,6 +14,7 @@ const MoneyInput = ({value = '0.00', style, onChangeText}) => {
     return (
         <>
             <TextInput 
+                {...props}
                 value={normalizer(numValue)} 
                 style={[styles.input, style]} 
                 keyboardType={'number-pad'}
