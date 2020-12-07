@@ -13,15 +13,16 @@ Then import it into your app and use it just like a regular TextInput
 ```
 import MoneyInput from 'react-native-money-input'
 const MyComponent = () => {
-    const [text setText] = useState()
-    return <MoneyInput onTextChange={text => setText(text)} />
+    return <MoneyInput onTextChange={text => console.log(text)} />
 }
 ```
 ![Money Input Gif](https://media.giphy.com/media/D7JtDrZGu2srLNyIWZ/giphy.gif)
-## Styling
-This component allows for custom styling simply by passing styles to the style prop. For example:
+## Styling & Passing Props
+This component allows for custom styling simply by passing styles to the style prop. You can also pass other props to the component. For example:
 ```
-<MoneyInput style={styles.moneyInput} />
+const MyStyledComponent = () => {
+    return <MoneyInput autoFocus={true} style={styles.moneyInput} />
+}
 const styles = StyleSheet.create({
     moneyInput: {
         fontSize: 74,
